@@ -1,5 +1,5 @@
 import axios from "axios";
-import { TeslaAPI, VehicleAPI } from "teslats";
+import { TeslaAPI, VehicleAPI } from "ts-tesla";
 
 const getAccessToken = async (refreshToken: string): Promise<string> => {
   const response = await axios.post("https://auth.tesla.com/oauth2/v3/token", {

@@ -1076,15 +1076,6 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-teslats@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/teslats/-/teslats-1.0.3.tgz#97de9873249a2d56f52120fc2fa7e80d08a5746e"
-  integrity sha512-IB+7UT8mooyoK13zBoEfuDCxuVO3kwioIGhtmU6/4Ad772gUjBI4HNjwOL8vZhi03YcNb5BE/cE5wgFy2gRsJA==
-  dependencies:
-    axios "^0.19.0"
-    rxjs "^6.5.3"
-    ws "^7.2.0"
-
 to-readable-stream@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/to-readable-stream/-/to-readable-stream-1.0.0.tgz#ce0aa0c2f3df6adf852efb404a783e77c0475771"
@@ -1108,6 +1099,15 @@ touch@^3.1.0:
   integrity sha512-WBx8Uy5TLtOSRtIq+M03/sKDrXCLHxwDcquSP2c43Le03/9serjQBIztjRz6FkJez9D/hleyAXTBGLwwZUw9lA==
   dependencies:
     nopt "~1.0.10"
+
+ts-tesla@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/ts-tesla/-/ts-tesla-1.0.6.tgz#b0d39aee3a21d4a905749b9ddf02945f94642931"
+  integrity sha512-d9I8A/KAt43skzPa2IJbjbERNLFNKRJeftJN+ViQWm5YkCPNqszBENGsj/cXmxvobHwlna9PjiDO8VCro8UhXw==
+  dependencies:
+    axios "^0.19.0"
+    rxjs "^6.5.3"
+    ws "^7.2.0"
 
 tslib@^1.9.0:
   version "1.14.1"

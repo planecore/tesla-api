@@ -7,7 +7,7 @@
   "dependencies": {
     "axios": "^0.25.0",
     "express": "^4.17.2",
-    "teslats": "^1.0.3"
+    "ts-tesla": "^1.0.6"
   },
   "scripts": {
     "build": "tsc",
