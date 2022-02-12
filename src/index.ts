@@ -13,22 +13,23 @@ app.use((req, res, next) => {
   return getAccessToken(refreshToken)
     .then((accessToken) => {
       req.token = accessToken;
-      next();
+      return getVehicle(req.token!)
+        .then(async (vehicle) => {
+          req.vehicle = vehicle;
+          next();
+        })
+        .catch(() => {
+          return res.status(500).send("couldn't get vehicle");
+        });
     })
-    .catch((err) => {
+    .catch(() => {
       res.status(401).send("authentication failed");
     });
 });
 
-app.post("/sentry", (req, res) => {
-  return getVehicle(req.token!)
-    .then(async (vehicle) => {
-      const result = await enableSentryMode(vehicle);
-      return res.status(result ? 200 : 500).send({ success: result });
-    })
-    .catch((err) => {
-      return res.status(500).send("couldn't get vehicle");
-    });
+app.post("/sentry", async (req, res) => {
+  const result = await enableSentryMode(req.vehicle!);
+  return res.status(result ? 200 : 500).send({ success: result });
 });
 
 app.listen(PORT, () => {
