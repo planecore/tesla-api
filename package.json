@@ -1,5 +1,5 @@
 {
-  "name": "sentry_api",
+  "name": "tesla-api",
   "version": "1.0.0",
   "main": "src/index.ts",
   "author": "Matan Mashraki",

@@ -20,7 +20,7 @@ app.use((req, res, next) => {
     });
 });
 
-app.post("/", (req, res) => {
+app.post("/sentry", (req, res) => {
   return getVehicle(req.token!)
     .then(async (vehicle) => {
       const result = await enableSentryMode(vehicle);

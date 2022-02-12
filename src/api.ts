@@ -16,7 +16,10 @@ const getVehicle = async (token: string) => {
   const api = new TeslaAPI(token);
   const vehicles = await api.vehicles();
   const vehicle = vehicles[0];
-  await vehicle.commands.wakeUp();
+  let result = 'offline';
+  while (result !== 'online') {
+    result = (await vehicle.commands.wakeUp()).state
+  }
   return vehicle;
 };
 
